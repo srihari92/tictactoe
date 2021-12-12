@@ -10,12 +10,12 @@ public class App {
 	{
         int boardSize=3;
         int maxTurns=boardSize*boardSize,turn=1;
-        TicTocToe.PLAYER winner=null;
-        TicTocToe ticTokToe=new TicTocToe(3);
+        TicTacToe.PLAYER winner=null;
+        TicTacToe ticTokToe=new TicTacToe(3);
         System.out.println("Welcome to 3x3 Tic Tac Toe.");
         ticTokToe.printBoard();
         System.out.println("X will play first. Enter a slot number to place X in:");
-        TicTocToe.PLAYER currentPlayer=TicTocToe.PLAYER.X;
+        TicTacToe.PLAYER currentPlayer=TicTacToe.PLAYER.X;
         try (Scanner in = new Scanner(System.in)) {
             while(winner== null){
                 try{
@@ -33,10 +33,10 @@ public class App {
                     }
 
                     turn++;
-                    if(currentPlayer==TicTocToe.PLAYER.X){
-                        currentPlayer=TicTocToe.PLAYER.O;
+                    if(currentPlayer==TicTacToe.PLAYER.X){
+                        currentPlayer=TicTacToe.PLAYER.O;
                     }else{
-                        currentPlayer=TicTocToe.PLAYER.X;
+                        currentPlayer=TicTacToe.PLAYER.X;
                     }
                     
                     ticTokToe.printBoard();
